@@ -1,10 +1,18 @@
 package org.example;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CabInvoiceGeneratorTest {
+
+    CabInvoiceGenerator cabInvoiceGenerator = null;
+
+    @Before
+    public void setUp() throws Exception {
+        CabInvoiceGenerator cabInvoiceGenerator = new CabInvoiceGenerator();
+    }
 
     @Test
     public void givenDistanceAndTimeShouldReturnFare(){
